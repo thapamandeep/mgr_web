@@ -1,0 +1,244 @@
+/* =========================
+   HERO SECTION FULL IMAGE
+========================= */
+.hero-section-full {
+    background: url('/img/9eb2fb44-26f4-4a69-9fbb-88ee679da3a0.png') center/cover no-repeat;
+    height: 90vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section-full .overlay {
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.btn-hero {
+    background: #ffb100;
+    color: #111;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-hero:hover {
+    background: #ffd633;
+}
+
+/* Statistics Section */
+.stats-section-full {
+    background: #f7f7f7;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.stat-box h2 {
+    font-size: 36px;
+    color: #764ba2;
+    margin-bottom: 8px;
+}
+
+.stat-box p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Features Section */
+.features-section-full {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.features-section-full h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #764ba2;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.feature-box {
+    background: #fff;
+    padding: 25px;
+    width: 280px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    text-align: center;
+}
+
+.feature-box img {
+    width: 50px;
+    margin-bottom: 15px;
+}
+
+.feature-box h3 {
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.feature-box p {
+    font-size: 14px;
+    color: #555;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* CTA Section */
+.cta-section-full {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.cta-section-full h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.cta-section-full p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn-cta {
+    background: #fff;
+    color: #764ba2;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-cta:hover {
+    background: #ffd633;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    .hero-content p {
+        font-size: 16px;
+    }
+    .stats-container, .features-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+    /* =========================
+   ABOUT US SECTION
+   ========================= */
+
+.about-section {
+    background-color: #f7f7f7; /* light gray background */
+    padding: 80px 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.about-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-section .about-image {
+    flex: 1 1 400px;
+}
+
+.about-section .about-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+.about-section .about-content {
+    flex: 1 1 500px;
+}
+
+.about-section .about-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.about-section .about-content p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.about-section .about-content .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #4CAF50; /* primary color */
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.about-section .about-content .btn:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .about-section .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-section .about-content .btn {
+        margin-top: 20px;
+    }
+}
+}

@@ -1,0 +1,103 @@
+.table-section .container {
+    width: 95%;
+    margin: 20px auto;
+}
+
+/* Table */
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Table header */
+.custom-table thead {
+    background-color: #0f172a; /* deep navy */
+    color: #fff;
+}
+
+.custom-table th, .custom-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Zebra striping */
+.custom-table tbody tr:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+/* Hover effect */
+.custom-table tbody tr:hover {
+    background-color: #e2e8f0;
+    transition: background 0.3s;
+}
+
+/* No records */
+.no-records {
+    text-align: center;
+    color: #ff4d4f;
+    font-weight: 500;
+    padding: 20px 0;
+}
+
+/* Table title */
+.table-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #0f172a;
+}
+
+/* Image in table */
+.custom-table td img {
+    width: 60px;          /* small thumbnail */
+    height: 60px;
+    object-fit: cover;    /* crops image nicely if not square */
+    border-radius: 8px;   /* rounded corners */
+    border: 1px solid #ddd;
+}
+/* Action buttons */
+.custom-table .action-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 0 2px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* View button */
+.custom-table .btn-view {
+    background-color: #4CAF50; /* green */
+}
+
+.custom-table .btn-view:hover {
+    background-color: #45a049;
+}
+
+/* Edit button */
+.custom-table .btn-edit {
+    background-color: #1E90FF; /* dodger blue */
+}
+
+.custom-table .btn-edit:hover {
+    background-color: #1c86ee;
+}
+
+/* Delete button */
+.custom-table .btn-delete {
+    background-color: #ff4d4f; /* red */
+}
+
+.custom-table .btn-delete:hover {
+    background-color: #e04344;
+}
