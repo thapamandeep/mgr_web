@@ -24,3 +24,4 @@ Route::get('/index',[AuthController::class,'index'])->name('get.index');
 
 // for contact
 Route::get('/contact',[AuthController::class,'contact'])->name('get.contact');
+Route::post('/contact-store',[AuthController::class,'contact_store'])->name('post.contact');

@@ -1,81 +1,109 @@
-    .contact-section {
-        background: #f7f7f7;
-        padding: 60px 0;
-        font-family: Arial, sans-serif;
-    }
+/* =========================
+   CONTACT FORM (MATCHED WITH FORM CSS)
+   ========================= */
 
+.contact-section {
+    background-color: #f9f9f9; /* same as form-section */
+    padding: 60px 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1); /* same shadow */
+}
+
+.contact-container h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #222;
+    margin-bottom: 30px;
+}
+
+/* Form Group */
+.contact-container .form-group {
+    margin-bottom: 20px;
+}
+
+/* Label */
+.contact-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+/* Input + Textarea */
+.contact-container input,
+.contact-container textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.contact-container input:focus,
+.contact-container textarea:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 6px rgba(76,175,80,0.3);
+    outline: none;
+}
+
+/* Button */
+.contact-container button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-container button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+/* Error message */
+.error-message {
+    color: #ff4d4f;
+    font-size: 13px;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Success message */
+.success-message {
+    display: block;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #4CAF50;
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
     .contact-container {
-        max-width: 600px;
-        margin: auto;
-        background: #fff;
-        padding: 40px;
-        border-radius: 12px;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        padding: 30px 20px;
     }
 
     .contact-container h2 {
-        text-align: center;
-        margin-bottom: 30px;
         font-size: 24px;
-        color: #0f172a;
     }
-
-    .contact-container .form-group {
-        margin-bottom: 20px;
-    }
-
-    .contact-container label {
-        display: block;
-        margin-bottom: 8px;
-        font-weight: 500;
-    }
-
-    .contact-container input,
-    .contact-container textarea {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        font-size: 14px;
-    }
-
-    .contact-container textarea {
-        resize: vertical;
-        min-height: 120px;
-    }
-
-    .contact-container button {
-        background-color: #0f172a;
-        color: #fff;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 8px;
-        font-size: 16px;
-        cursor: pointer;
-        width: 100%;
-        transition: 0.3s;
-    }
-
-    .contact-container button:hover {
-        background-color: #1e293b;
-    }
-
-    .error-message {
-        color: #ff4d4f;
-        font-size: 13px;
-        margin-top: 5px;
-        display: block;
-    }
-
-    .success-message {
-        display: block;
-        padding: 12px 15px;
-        margin-bottom: 20px;
-        border: 1px solid #4CAF50;
-        background-color: #d4edda;
-        color: #155724;
-        border-radius: 8px;
-        font-size: 14px;
-        font-weight: 500;
-        text-align: center;
-    }
+}

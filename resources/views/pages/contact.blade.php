@@ -11,7 +11,7 @@
             <div class="success-message">{{ session('success') }}</div>
         @endif
 
-        <form action="#" method="POST">
+        <form action="{{route('post.contact')}}" method="POST">
             @csrf
             <div class="form-group">
                 <label for="name">Full Name</label>

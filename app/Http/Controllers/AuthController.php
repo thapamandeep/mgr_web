@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\facades\Hash;
-use Illuminate\Support\facades\Session;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 use App\Models\User;
 use App\Models\Role;
+use App\Models\Contact;
+use App\Mail\ContactMail;
+use Illuminate\Support\Facades\Mail;
 
 class AuthController extends Controller
 {
@@ -104,5 +107,27 @@ class AuthController extends Controller
 
     return view('pages.contact',);
     }
+
+    public function contact_store(Request $request){
+
+    $data = $request->validate([
+    'name'=>'required|string',
+    'email'=>'required|email',
+    'message'=>'required|string'
+    ]);
+
+    $contact = new Contact();
+    $contact->name = $data['name'];
+    $contact->email = $data['email'];
+    $contact->message = $data['message'];
+
+  
+    Mail::to('mgrmandeep07@gmail.com')->send(new ContactMail($contact));
+
+    Session::flash('success','your message has been submit successfully');
+    
+    return redirect()->back();
+    }
+
 
 }
