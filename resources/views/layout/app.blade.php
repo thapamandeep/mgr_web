@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Langhali magar samaj</title>
+
+    <link rel="icon" type="image/png" href="{{asset('img/lesotho.png')}}">
      
     <link rel="stylesheet" href="{{asset('css/header-style.css')}}">
     <link rel="stylesheet" href="{{asset('css/home-style.css')}}">
@@ -27,3 +29,5 @@
 </script>
 </body>
 </html>
+
+<!-- favicon -->

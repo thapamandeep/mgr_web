@@ -43,7 +43,7 @@
 
 /* Navigation */
 .nav-links ul {
-    display: flex;
+    display: block;
     gap: 25px;
     list-style: none;
     margin: 0;
@@ -107,4 +107,29 @@
 .hero-text p {
     font-size: 14px;
     color: #555;
+}
+
+.nav-links > ul {
+    display: flex;
+    align-items: center;
+}
+
+/* Each main menu item */
+.nav-links > ul > li {
+    position: relative;
+    list-style: none;
+}
+
+/* Hide dropdown by default */
+.dropdown{
+    display: none;
+}
+li:hover .dropdown {
+    display: block;
+    position: absolute;
+    top: 100%;   /* show below parent link */
+    left: 0;
+}
+.dropdown > ul{
+margin: 0;
 }

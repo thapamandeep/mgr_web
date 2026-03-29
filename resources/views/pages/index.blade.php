@@ -13,8 +13,6 @@
                     <th>Full Name</th>
                     <th>Email</th>
                     <th>Phone</th>
-                    <th>House Number</th>
-                    <th>Family Members</th>
                     <th>Role</th>
                     <th>Created At</th>
                     <th colspan="3">Action</th>
@@ -31,15 +29,13 @@
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->email }}</td>
                     <td>{{ $user->phone }}</td>
-                    <td>{{ $user->house_number }}</td>
-                    <td>{{ $user->no_of_family_members }}</td>
                     <td>{{ $user->role ? $user->role->name : '-' }}</td>
                     <td>{{ $user->created_at->format('d M, Y') }}</td>
                   <td>
     
-                  <button class="action-btn btn-view">View</button>
+                 <a href="{{route('get.show', $user->id)}}"><button class="action-btn btn-view">View</button></a> 
     
-                  <button class="action-btn btn-edit">Edit</button>
+                  <a href="{{route('get.edit',$user->id)}}"><button class="action-btn btn-edit">Edit</button></a>
     
                   <button class="action-btn btn-delete" onclick="return confirm('Are you sure?')">Delete</button>
 

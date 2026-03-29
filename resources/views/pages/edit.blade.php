@@ -10,12 +10,12 @@
         </div>
     @endif
 
-    <form action="{{ route('register.store') }}" method="POST"  enctype="multipart/form-data">
+    <form action="{{ route('post.edit.store',$user->id) }}" method="POST"  enctype="multipart/form-data">
         @csrf
 
         <div>
             <label for="name">Name</label>
-            <input type="text" name="name" id="name" value="{{ old('name') }}">
+            <input type="text" name="name" id="name" value="{{ old('name', $user->name) }}">
             @error('name')
                 <span class="invalid-feedback">{{ $message }}</span>
             @enderror
@@ -23,7 +23,7 @@
 
         <div>
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" value="{{ old('email') }}">
+            <input type="email" name="email" id="email" value="{{ old('email', $user->email) }}">
             @error('email')
                 <span class="invalid-feedback">{{ $message }}</span>
             @enderror
@@ -31,7 +31,7 @@
 
           <div>
             <label for="phone">Phone</label>
-            <input type="text" name="phone" id="phone" value="{{ old('phone') }}">
+            <input type="text" name="phone" id="phone" value="{{ old('phone', $user->phone) }}">
             @error('phone')
                 <span class="invalid-feedback">{{ $message }}</span>
             @enderror
@@ -40,7 +40,7 @@
              <!-- Image Upload -->
         <div>
             <label for="image">Profile Image</label>
-            <input type="file" name="image" id="image" accept="image/*">
+            <input type="file" name="image" id="image" accept="image/*" value="{{old('image', $user->image)}}">
             @error('image')
                 <span class="invalid-feedback">{{ $message }}</span>
             @enderror
@@ -48,7 +48,7 @@
 
         <div>
             <label for="password">Password</label>
-            <input type="password" name="password" id="password">
+            <input type="password" name="password" id="password" value="{{ $user->password}}">
             @error('password')
                 <span class="invalid-feedback">{{ $message }}</span>
             @enderror

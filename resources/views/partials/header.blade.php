@@ -18,10 +18,29 @@
                 <li><a href="{{route('home.page')}}" class="{{ request()->routeIs('home') ? 'active' : '' }}">Home</a></li>
                 <li><a href="#" class="{{ request()->routeIs('about') ? 'active' : '' }}">About</a></li>
                 <li><a href="{{route('get.form')}}" class="{{ request()->routeIs('form.page') ? 'active' : '' }}">Form</a></li>
-                <li><a href="{{route('get.index')}}" class="{{ request()->routeIs('record.page') ? 'active' : '' }}">Records</a></li>
+        <li>
+    <a href="{{route('get.members.index')}}" class="nav-link {{ request()->routeIs('record.page') ? 'active' : '' }}">
+        Members
+    </a>
+
+   
+
                 <li><a href="{{route('get.contact')}}" class="{{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a></li>
+
+                     <li>
+    <a href="{{ route('login.page') }}" style="
+        background:#e63946;
+        color:#fff;
+        padding:8px 15px;
+        border-radius:5px;
+        text-decoration:none;">
+        Logout
+    </a>
+</li>
             </ul>
         </nav>
+
+   
 
         <!-- Mobile Menu Toggle -->
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>

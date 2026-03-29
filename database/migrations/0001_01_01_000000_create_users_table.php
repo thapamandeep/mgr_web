@@ -17,9 +17,9 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('phone')->unique();
-            $table->integer('house_number');
-            $table->integer('no_of_family_members');
+            $table->string('password')->unique();
             $table->foreignId('role_id')->constrained('role')->onDelete('cascade');
+            $table->string('otp')->nullable();
             $table->timestamps();
         });
 

@@ -55,8 +55,14 @@
         <button type="submit">Login</button>
     </form>
 
-    <p style="text-align:center; margin-top:15px;">
-        Don't have an account? Register here
-    </p>
+<p style="text-align:center; margin-top:15px;">
+    Don't have an account?  
+    <a href="{{route('register.page')}}">Register here</a>
+</p>
+
+<p style="text-align:center; margin-top:8px;">
+    <a href="{{route('get.forgot.password')}}">Forgot Password?
+    </a>
+</p>
 </div>
 
