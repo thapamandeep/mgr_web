@@ -4,12 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Role;
+use App\Models\Hero;
 
 class SiteController extends Controller
 {
   public function home(){
 
-  return view('pages.home');
+  $heroes = Hero::all();
+
+  return view('pages.home',compact('heroes'));
   }
 
   public function register(){

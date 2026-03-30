@@ -1,4 +1,4 @@
-@extends('layout.admin-tamplate')
+@extends('admin.layout.admin-tamplate')
 
 @section('content')
 
@@ -31,8 +31,8 @@
             <h2>🌐 Website</h2>
             <p>Control website categories and products.</p>
             <div class="btn-group">
-                <a href="#">Add Category</a>
-                <a href="#">Add Product</a>
+                <a href="{{route('get.hero.form')}}">Hero Section</a>
+                <a href="{{route('get.hero.index')}}">Index Hero</a>
             </div>
         </div>
 

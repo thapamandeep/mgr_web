@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HeroController;
 use App\Http\Middleware\RoleMiddleware;
 use App\Http\Middleware\AdminMiddleware;
 // home page
@@ -44,4 +45,11 @@ Route::post('/update-password',[AuthController::class,'updatePassword'])->name('
 
 // for admin
 Route::get('/admin',[SiteController::class,'admin'])->name('get.admin')->middleware('admin');
+
+// --------------------------for hero ---------------------------------//
+Route::get('/hero-form',[HeroController::class,'hero'])->name('get.hero.form')->middleware('admin');
+Route::post('/store-hero',[HeroController::class,'storeHero'])->name('hero.store')->middleware('admin');
+Route::get('/index-hero',[HeroController::class,'index'])->name('get.hero.index')->middleware('admin');
+Route::get('edit-hero/{hero}',[HeroController::class,'edit'])->name('get.edit.hero')->middleware('admin');
+Route::get('delete-hero/{hero}',[HeroController::class,'delete'])->name('get.delete.hero')->middleware('admin');
 

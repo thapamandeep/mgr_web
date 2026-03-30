@@ -1,0 +1,82 @@
+/* ===== HERO FORM DESIGN ===== */
+
+.container {
+    max-width: 700px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Card style */
+.hero-form-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Labels */
+.hero-form-card label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Inputs */
+.hero-form-card input,
+.hero-form-card textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* Focus effect */
+.hero-form-card input:focus,
+.hero-form-card textarea:focus {
+    border-color: #000;
+    outline: none;
+}
+
+/* Button */
+.hero-form-card button {
+    width: 100%;
+    padding: 12px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Button hover */
+.hero-form-card button:hover {
+    background: #333;
+}
+
+/* Success message */
+.success-message {
+    background: #e6ffed;
+    color: #2e7d32;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Error message */
+.error-message {
+    background: #ffe6e6;
+    color: #c62828;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}

@@ -2,23 +2,27 @@
 
 @section('content')
 
-<!-- Hero Section -->
-<section class="hero-section-inline" 
-         style="background: url('{{ asset('img/langhali-community.png') }}') center/cover no-repeat; height: 90vh; position: relative; display: flex; align-items: center; justify-content: center;">
-    
-    <div class="overlay" style="background: rgba(0,0,0,0.5); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-        <div class="hero-content" style="text-align: center; color: #fff;">
-            <h1 style="font-size: 48px; margin-bottom: 15px; font-weight: 700;">Langhali Magar Samaj</h1>
-            <p style="font-size: 20px; margin-bottom: 25px;">Unity, Culture, and Development for the Magar Community</p>
-            <a href="#" 
-               style="background: #ffb100; color: #111; padding: 12px 30px; font-weight: 600; border-radius: 8px; text-decoration: none; transition: 0.3s;">Submit Form</a>
+<div class="swiper hero-slider">
+    <div class="swiper-wrapper">
+        @foreach($heroes as $hero)
+        <div class="swiper-slide" style="background: url('{{ asset('storage/album/'.$hero->image) }}') center/cover no-repeat;">
+            <div class="overlay">
+                <div class="hero-title" data-animation="fadeInDown">
+                    <h1>{{ $hero->title }}</h1>
+                </div>
+                <div class="hero-bottom">
+                    <p data-animation="fadeInUp">{{ $hero->subtitle }}</p>
+                    <a href="{{ $hero->button_link }}" data-animation="fadeIn">{{ $hero->button_text }}</a>
+                </div>
+            </div>
         </div>
+        @endforeach
     </div>
 
-</section>
-
-
-
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+</div>
 <!-- Statistics Section -->
 <section class="stats-section-full">
     <div class="container stats-container">

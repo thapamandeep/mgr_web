@@ -1,38 +1,98 @@
 /* =========================
    HERO SECTION FULL IMAGE
 ========================= */
-.hero-section-full {
-    background: url('/img/9eb2fb44-26f4-4a69-9fbb-88ee679da3a0.png') center/cover no-repeat;
-    height: 90vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.hero-section-full .overlay {
+
+.hero-slider {
+    width: 100%;
+    height: 100vh;  /* 90vh बाट 100vh मा बढायौं, full screen */
+    position: relative;
+    overflow: hidden;
+}
+.hero-slider .overlay {
     background: rgba(0,0,0,0.5);
     width: 100%;
     height: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 70px 20px; /* पुरानो 50px → 70px */
+}
+
+/* =========================
+   Hero Title
+========================= */
+.hero-title {
+    text-align: center;
+    color: #fff;
+    margin-top: 160px;
+}
+
+.hero-title h1 {
+    font-size: 80px;                     /* बड़ा र attention-grabbing */
+    font-weight: 800;
+    line-height: 1.2;
+    text-transform: uppercase;           /* capital letters */
+    letter-spacing: 2px;                 /* spacing between letters */
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.7);  /* shadow for readability */
+    animation: fadeInDown 1.5s ease-in-out;      /* slide-down animation */
+}
+
+/* =========================
+   Hero Subtitle
+========================= */
+.hero-bottom p {
+    font-size: 40px;                      /* slightly smaller than title */
+    font-weight: 500;
+    line-height: 1.6;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 315px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInUp 2s ease-in-out;    /* slide-up animation */
+}
+
+.hero-bottom a {
+    background: #ffb100;
+    color: #111;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 14px 40px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.4s;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+.hero-bottom a:hover {
+    background: #ffaa00;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
 .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* vertical center */
+    align-items: center;       /* horizontal center */
     text-align: center;
-    color: #fff;
+            
 }
 
 .hero-content h1 {
     font-size: 48px;
-    margin-bottom: 15px;
+    margin: 0;
+    top: 100px;                 /* remove extra space */
     font-weight: 700;
 }
 
 .hero-content p {
     font-size: 20px;
-    margin-bottom: 25px;
+    margin: 15px 0 25px;       /* balanced spacing */
 }
 
 .btn-hero {
@@ -48,7 +108,6 @@
 .btn-hero:hover {
     background: #ffd633;
 }
-
 /* Statistics Section */
 .stats-section-full {
     background: #f7f7f7;
@@ -155,6 +214,31 @@
     background: #ffd633;
 }
 
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.animate {
+    opacity: 0; /* hidden by default */
+}
+
+.animate.show {
+    opacity: 1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .hero-content h1 {
@@ -170,7 +254,27 @@
     /* =========================
    ABOUT US SECTION
    ========================= */
+[data-animation] {
+    opacity: 0;
+    transform: translateY(20px); /* or translateY(-20px) for fadeInDown */
+    transition: all 0.8s ease-in-out;
+}
 
+[data-animation].show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Optional: keyframes if you want */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 .about-section {
     background-color: #f7f7f7; /* light gray background */
     padding: 80px 20px;

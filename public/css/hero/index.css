@@ -1,0 +1,43 @@
+/* Table Design (Match Dashboard) */
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.admin-table thead {
+    background: #2c3e50;
+    color: white;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.admin-table tbody tr {
+    border-bottom: 1px solid #eee;
+    transition: 0.3s;
+}
+
+.admin-table tbody tr:hover {
+    background: #f5f7fa;
+}
+
+.admin-table img {
+    border-radius: 6px;
+}
+
+/* Action buttons inside table */
+.admin-table .btn-group a {
+    background: #4ca1af;
+}
+
+.admin-table .btn-group a:hover {
+    background: #2c3e50;
+}
