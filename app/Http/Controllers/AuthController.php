@@ -9,6 +9,7 @@ use App\Models\User;
 use App\Models\Role;
 use App\Models\Register;
 use App\Models\Contact;
+use App\Models\About;
 use App\Mail\ContactMail;
 use App\Mail\otpMail;
 use Illuminate\Support\Facades\Mail;
@@ -283,6 +284,43 @@ public function membersIndex(){
 $users = User::orderByRaw("FIELD(role_id, 2 , 3 , 1)")->get();
 
 return view('pages.members-index', compact('users'));
+}
+
+// --------------------------- about us ------------------------------//
+
+public function aboutUs(){
+
+$about = About::first();
+
+return view('pages.aboutUs',compact('about'));
+}
+
+public function aboutForm(){
+
+return view('admin.about.form');
+}
+
+public function storeAbout(Request $request){
+    $data = $request->validate([
+        'title'=>'required|string',
+        'description'=>'required|string',
+        'image'=>'nullable|image|mimes:jpeg,jpg,png',
+    ]);
+    $newImage = "";
+    if($request->hasFile('image')){
+        $file = $request->file('image');
+        $newImage = time().'.'.$file->getClientOriginalExtension();
+        $file->storeAs('album',$newImage,'public');
+    }
+
+    $about =  new About();
+    $about->title = $data['title'];
+    $about->description = $data['description'];
+    $about->image = $newImage;
+
+    $about->save();
+    
+    return redirect()->back()->with('success','your about data has been added');
 }
 
 }

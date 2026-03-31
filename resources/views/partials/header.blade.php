@@ -16,7 +16,7 @@
         <nav class="nav-links" id="navLinks">
             <ul>
                 <li><a href="{{route('home.page')}}" class="{{ request()->routeIs('home') ? 'active' : '' }}">Home</a></li>
-                <li><a href="#" class="{{ request()->routeIs('about') ? 'active' : '' }}">About</a></li>
+                <li><a href="{{route('get.about.us')}}">About</a></li>
                 <li><a href="{{route('get.form')}}" class="{{ request()->routeIs('form.page') ? 'active' : '' }}">Form</a></li>
         <li>
     <a href="{{route('get.members.index')}}" class="nav-link {{ request()->routeIs('record.page') ? 'active' : '' }}">

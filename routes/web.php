@@ -53,3 +53,7 @@ Route::get('/index-hero',[HeroController::class,'index'])->name('get.hero.index'
 Route::get('edit-hero/{hero}',[HeroController::class,'edit'])->name('get.edit.hero')->middleware('admin');
 Route::get('delete-hero/{hero}',[HeroController::class,'delete'])->name('get.delete.hero')->middleware('admin');
 
+// ------------------------for about us ---------------------------//
+Route::get('about-us',[AuthController::class,'aboutUs'])->name('get.about.us');
+Route::get('about-form',[AuthController::class,'aboutForm'])->name('get.aboutus.form')->middleware('admin');
+Route::post('store-aboutus',[AuthController::class,'storeAbout'])->name('post.about.us')->middleware('admin');

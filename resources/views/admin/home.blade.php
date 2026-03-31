@@ -22,7 +22,7 @@
             <h2>📑 Records</h2>
             <p>Manage register and members records.</p>
             <div class="btn-group">
-                <a href="#">Register Records</a>
+                <a href="{{route('get.aboutus.form')}}">Form </a>
                 <a href="#">Members Records</a>
             </div>
         </div>

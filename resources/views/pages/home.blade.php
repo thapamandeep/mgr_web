@@ -27,8 +27,13 @@
 <section class="stats-section-full">
     <div class="container stats-container">
         <div class="stat-box">
-            <h2>250+</h2>
-            <p>Active Members</p>
+
+        @php
+        use App\Models\User;
+        $total_member = User::count();
+    @endphp
+            <h2>{{$total_member}} +</h2>
+            <p>Total Members</p>
         </div>
         <div class="stat-box">
             <h2>50+</h2>
@@ -41,17 +46,7 @@
     </div>
 </section>
 
-<!-- about us -->
-<section class="about-section">
-    <div class="container">
-      
-        <div class="about-content">
-            <h2>About Us</h2>
-            <p>We are dedicated to providing the best service and solutions for our clients, combining innovation, passion, and expertise in every project we undertake.</p>
-            <a href="/contact" class="btn">Contact Us</a>
-        </div>
-    </div>
-</section>
+
 
 <!-- Why Join Section -->
 <section class="features-section-full">

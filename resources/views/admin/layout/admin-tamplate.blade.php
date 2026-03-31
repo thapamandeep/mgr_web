@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{asset('css/admin.css')}}">
     <link rel="stylesheet" href="{{asset('css/hero/hero.css')}}">
     <link rel="stylesheet" href="{{asset('css/hero/index.css')}}">
+    <link rel="stylesheet" href="{{asset('css/aboutus-form.css')}}">
 </head>
 <body>
     @include('partials.admin.header')
