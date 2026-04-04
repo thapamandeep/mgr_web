@@ -323,6 +323,12 @@ public function storeAbout(Request $request){
     return redirect()->back()->with('success','your about data has been added');
 }
 
+// -----------------------cultural heritage --------------------------//
+public function culturalHeritage(){
+
+return view('pages.cultural-heritage');
+}
+
 }
 
 

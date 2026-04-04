@@ -57,3 +57,6 @@ Route::get('delete-hero/{hero}',[HeroController::class,'delete'])->name('get.del
 Route::get('about-us',[AuthController::class,'aboutUs'])->name('get.about.us');
 Route::get('about-form',[AuthController::class,'aboutForm'])->name('get.aboutus.form')->middleware('admin');
 Route::post('store-aboutus',[AuthController::class,'storeAbout'])->name('post.about.us')->middleware('admin');
+
+// -----------------------cultural heritage -------------------------//
+Route::get('cultural-heritage',[AuthController::class,'culturalHeritage'])->name('get.cultural.heritage');

@@ -53,11 +53,12 @@
     <div class="container">
         <h2>Why Join Us</h2>
         <div class="features-grid">
-            <div class="feature-box">
+           <div class="feature-box">
                 <img src="{{ asset('img/mgr-icon.png') }}" alt="Cultural Heritage Icon">
-                <h3>Cultural Heritage</h3>
+               <a href="{{route('get.cultural.heritage')}}"> <h3>Cultural Heritage</h3></a>
                 <p>We celebrate and preserve Magar traditions, music, and arts.</p>
             </div>
+
             <div class="feature-box">
                 <img src="{{ asset('img/community-icon.jpg') }}" alt="Community Support Icon">
                 <h3>Community Support</h3>

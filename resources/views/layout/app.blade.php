@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{asset('css/aboutUs.css')}}">
     <link rel="stylesheet" href="{{asset('css/footer-style.css')}}">
     <link rel="stylesheet" href="{{asset('css/contact-style.css')}}">
+    <link rel="stylesheet" href="{{asset('css/heritage.css')}}">
    
 </head>
 <body>
